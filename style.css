@@ -44,18 +44,18 @@ padding: 0;
 }
 
 .logo{
-    margin: 10px;
+    margin: 5px;
     background-image: url(other/music\ logo\ design.png);
     background-position: center;
     background-size: cover;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 .home{
     height: 500px;
-    color: #A8CF45;
-    pad: 12px;
+    color: #fff;
+    padding: 12px;
     font-family: 'Lato', sans-serif;
     padding: 40px 0px;
     background-image: url(other/tree.jpeg);
@@ -69,8 +69,7 @@ padding: 0;
     justify-content: center;
     margin: auto;
     border-radius: 10px;
-    /* background-color: #001822; */
-    background-image: url(other/jam.jpeg);
+    background-image: url(other/7.jpg);
     background-position: center;
     background-size: cover;
    
@@ -89,9 +88,10 @@ padding: 0;
     display: flex;
     flex-direction: row;
     height: 50px;
-    width: 70%;
+    width: 60%;
     font-size: 20px;
     color: black;
+    box-shadow: 12px 10px 16px #000;
     margin: 12px 10px;
     border-radius: 12px;
     background-color: #0098DA;
@@ -104,6 +104,7 @@ padding: 0;
 .songlist img{
     width: 43px;
     margin: 0px 12px;
+    border-radius: 10px;
 }
 .duration,i{
     margin: 5px;
@@ -141,6 +142,9 @@ padding: 0;
 }
 #myProgressBar{
     width: 80vw;
+    height: 2px;
+    cursor: pointer;
+    
 }
 .icons{
     margin: 12px;
