@@ -11,8 +11,8 @@ let songlist = Array.from(document.getElementsByClassName("songlist"))
 
 
 let songs = [
-    {songName: "Back in Time", filePath: "/song/1.mp3", converPath: "other/1.jpg"},
-    {songName: "Fighter", filePath: "/song/2.mp3", converPath: "other/2.jpg"},
+    {songName: "Back in Time", filePath: "song/1.mp3", converPath: "other/1.jpg"},
+    {songName: "Fighter", filePath: "song/2.mp3", converPath: "other/2.jpg"},
     {songName: "Backgroud music", filePath: "song/3.mp3", converPath: "other/3.jpg"},
     {songName: "Obsessed", filePath: "song/4.mp3", converPath: "other/4.avif"},
     {songName: "Tere Vaaste", filePath: "song/5.mp3", converPath: "other/5.avif"},
