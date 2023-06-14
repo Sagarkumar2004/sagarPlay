@@ -53,7 +53,7 @@ padding: 0;
     border-radius: 50%;
 }
 .home{
-    height: 500px;
+    height: 100vh;
     color: #fff;
     padding: 12px;
     font-family: 'Lato', sans-serif;
@@ -150,8 +150,6 @@ padding: 0;
     margin: 12px;
     cursor: pointer;
 }
-
-
 
 
 @media screen and (max-width: 680px) {

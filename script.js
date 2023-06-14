@@ -2,7 +2,7 @@ console.log("welcome to music");
 
 //Init the variables
 let songIndex = 0;
-let audioElement = new Audio("song/1.mp3");
+let audioElement = new Audio("Song/1.mp3");
 let masterPlay = document.getElementById("masterPlay");
 let myProgressBar = document.getElementById("myProgressBar");
 let gif = document.getElementById("gif");
@@ -12,31 +12,31 @@ let songPlay = Array.from(document.getElementsByClassName("songPlay"));
 
 let songs = [
   { songName: "issa vibe",
-    filePath: "song/1.mp3",
+    filePath: "Song/1.mp3",
     converPath: "other/1.jpg" 
   },
 
   { songName: "Fighter",
-    filePath: "song/2.mp3",
+    filePath: "Song/2.mp3",
     converPath: "other/2.jpg" 
   },
   {
     songName: "Backgroud music",
-    filePath: "song/3.mp3",
+    filePath: "Song/3.mp3",
     converPath: "other/3.jpg",
   },
   { songName: "Obsessed",
-    filePath: "song/4.mp3",
+    filePath: "Song/4.mp3",
     converPath: "other/4.avif" 
   },
   {
     songName: "Tere Vaaste",
-    filePath: "song/5.mp3",
+    filePath: "Song/5.mp3",
     converPath: "other/5.avif",
   },
   {
     songName: "Raatan Lambiyan",
-    filePath: "song/6.mp3",
+    filePath: "Song/6.mp3",
     converPath: "other/6.jpeg",
   },
 ];
@@ -75,13 +75,13 @@ masterPlay.addEventListener("click", () => {
 // update range
 
 audioElement.addEventListener("timeupdate", () => {
-  progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+  progress = parseInt((audioElement.currentTime / audioElement.duration) * 1000);
   myProgressBar.value = progress;
 });
 
 myProgressBar.addEventListener("change", () => {
   audioElement.currentTime =
-    (myProgressBar.value * audioElement.duration) / 100;
+    (myProgressBar.value * audioElement.duration) / 1000;
 });
 
 // song play and pause in list song
