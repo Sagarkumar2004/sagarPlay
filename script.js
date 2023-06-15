@@ -61,7 +61,8 @@ window.addEventListener("load", () => {
       masterPlay.classList.remove("fa-play-circle");
       masterPlay.classList.add("fa-pause-circle");
       gif.style.opacity = "1";
-      // gifSongName.innerText = songs[songIndex - 1].songName;
+      
+ 
 
 
     } else {
@@ -75,6 +76,21 @@ window.addEventListener("load", () => {
   });
 
   // listen to events
+
+  //auto play song
+
+  audioElement.addEventListener('ended', () => {
+    
+    if (songIndex < songs.length) {
+      gifSongName.innerText = songs[songIndex++].songName;
+      audioElement.src = `Song/${songIndex++}.mp3`;
+      audioElement.currentTime = "0";
+      audioElement.play()
+    } else {
+      
+      console.log('Playlist ended');
+    }
+  });
 
   // update range
 
@@ -119,6 +135,28 @@ window.addEventListener("load", () => {
         masterPlay.classList.remove("fa-play-circle");
         masterPlay.classList.add("fa-pause-circle");
         gif.style.opacity = "1";
+
+
+        /////////////////////////////pending  auto enble play icon ////////////////
+
+        audioElement.addEventListener('ended', () => {
+          
+          e.target.classList.add("fa-play-circle");
+          e.target.classList.remove("fa-pause-circle");
+          // if(songIndex < songIndex.length){
+          //   songIndex = parseInt(e.target.id++);
+          //   e.target.classList.add("fa-play-circle");
+          //    e.target.classList.remove("fa-pause-circle");
+          // }else{
+          //   console.log(" song playlist is ended")
+          // }
+
+
+
+        })
+        
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
       } else {
         makeAllPause();
         gif.style.opacity = "0";
@@ -134,6 +172,8 @@ window.addEventListener("load", () => {
       }
     });
   });
+
+
 
   // Next main icon
 
