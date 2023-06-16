@@ -87,8 +87,21 @@ window.addEventListener("load", () => {
       audioElement.currentTime = "0";
       audioElement.play()
     } else {
+
+          if(confirm("The playlist has been ended , do want to play again") == true){
+            audioElement.src = "Song/1.mp3";
+            songIndex = 0
+            gifSongName.innerText = songs[songIndex].songName;
+         audioElement.play();
+         masterPlay.classList.remove("fa-play-circle");
+         masterPlay.classList.add("fa-pause-circle");
+     } 
+     else{
+      masterPlay.classList.add("fa-play-circle");
+      masterPlay.classList.remove("fa-pause-circle");
+      gif.style.opacity = "0";
+     }
       
-      console.log('Playlist ended');
     }
   });
 
