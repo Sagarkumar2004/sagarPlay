@@ -45,14 +45,14 @@ window.addEventListener("load", () => {
     },
   ];
 
+  // Adding songs in playlist
+
   songlist.forEach((element, i) => {
     element.getElementsByTagName("img")[0].src = songs[i].converPath;
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
   });
 
-  gifSongName.innerText = "";
 
-  // audioElement.play();
 
   // Handle master play and pause
   masterPlay.addEventListener("click", () => {
@@ -61,8 +61,8 @@ window.addEventListener("load", () => {
       masterPlay.classList.remove("fa-play-circle");
       masterPlay.classList.add("fa-pause-circle");
       gif.style.opacity = "1";
+      gifSongName.innerText = songs[songIndex -1].songName;
       
- 
 
 
     } else {
@@ -71,6 +71,7 @@ window.addEventListener("load", () => {
       audioElement.pause();
       gif.style.opacity = "0";
       gifSongName.innerText = "";
+    
 
     }
   });
@@ -92,29 +93,29 @@ window.addEventListener("load", () => {
             audioElement.src = "Song/1.mp3";
             songIndex = 0
             gifSongName.innerText = songs[songIndex].songName;
-         audioElement.play();
-         masterPlay.classList.remove("fa-play-circle");
-         masterPlay.classList.add("fa-pause-circle");
+
+            audioElement.play();
+            masterPlay.classList.remove("fa-play-circle");
+            masterPlay.classList.add("fa-pause-circle");
      } 
      else{
-      masterPlay.classList.add("fa-play-circle");
-      masterPlay.classList.remove("fa-pause-circle");
-      gif.style.opacity = "0";
+            masterPlay.classList.add("fa-play-circle");
+            masterPlay.classList.remove("fa-pause-circle");
+            gif.style.opacity = "0";
      }
       
     }
   });
 
-  // update range
+  // update range0
 
   audioElement.addEventListener("timeupdate", () => {
-    progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+    progress = parseInt((audioElement.currentTime / audioElement.duration) * 1000);
     myProgressBar.value = progress;
   });
 
   myProgressBar.addEventListener("change", () => {
-    audioElement.currentTime =
-      (myProgressBar.value * audioElement.duration) / 100;
+    audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 1000;
   });
 
   // song play and pause in list song
@@ -150,7 +151,7 @@ window.addEventListener("load", () => {
         gif.style.opacity = "1";
 
 
-        /////////////////////////////pending  auto enble play icon ////////////////
+        /////////////////////////////pending  auto enble play icon in playlist ////////////////
 
         audioElement.addEventListener('ended', () => {
           

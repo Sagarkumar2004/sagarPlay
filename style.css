@@ -13,6 +13,7 @@ padding: 0;
     display: flex;
     flex-direction: row;
     
+    
 }
 .navbar ul{
     margin: 20px;
@@ -31,14 +32,25 @@ padding: 0;
     background-color: #001822;
     padding: 5px;
     cursor: pointer;
-    width: 70px;
+    width: 90px;
     height: 25px;
+    border: 1px solid transparent;
     border-radius: 12px;
+    padding: 10px;
+
+   
     
+}
+.navbar ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: #0098DA;
+     
 }
 .navbar ul li:hover{
     color: #A8CF45;
-    background-color: #00182275;
+    background-color: transparent;
+    border: 1px solid #0098DA;
    
     
 }
@@ -52,8 +64,39 @@ padding: 0;
     height: 70px;
     border-radius: 50%;
 }
+.rightNav{
+    width: 200px;
+    height: 70px;
+    display: flex;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+
+
+}
+.loginBtn, .sinInBtn{
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0098DA;
+    color: #A8CF45;
+    margin: auto 6px;
+    border: 1px solid #0098DA;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+
+}
+.loginBtn:hover, .sinInBtn:hover{
+    background-color: transparent;
+    color: #0098DA;
+    border: 1px solid #0098DA;
+}
+#navIcon{
+    display: none;
+}
 .home{
-    height: 100vh;
+    height: 110vh;
     color: #fff;
     padding: 12px;
     font-family: 'Lato', sans-serif;
@@ -120,12 +163,12 @@ padding: 0;
     position: sticky;
     background-color: #000;
     color: #fff;
-    font-size: 18pxpx;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 140px;
+    height: 40vh;
     bottom: 0;
 }
 .songGif{
@@ -140,22 +183,29 @@ padding: 0;
     transition: 1s;
     
 }
-#myProgressBar{
+#myProgressBar {
     width: 80vw;
     height: 2px;
+    border-radius: 6px;
     cursor: pointer;
-    
-}
+  }
+  #myProgressBar:hover {
+    height: 5px;
+    transition: 0.5s;
+
+  }
+  
+  
 .icons{
     margin: 12px;
     cursor: pointer;
 }
 
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 700px) {
+
     .songContainer{
        margin: auto;
-       
        
     }
     .songlist{
@@ -163,10 +213,7 @@ padding: 0;
         flex-direction: row;
         height: 50px;
         width: auto;
-        font-size: 18px;
-        color: black;
         margin: 10px;
-       
         
     }
     .songGif{
@@ -174,15 +221,12 @@ padding: 0;
        margin: 10px;
        font-size: 12px;
        left: 5vw;
-        display: flex;
-        flex-direction: column;
+       display: flex;
+       flex-direction: column;
     
     }
     .songGif img{
-        
         width: 50px;
-       
-         
      
      }
     .icons{
@@ -190,11 +234,56 @@ padding: 0;
     }
     
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+   .navbar{
+    height: 70px;
+    background-image: url(other/tree.jpeg);
+   }
+   .logo{
+  
+    width: 60px;
+    height: 60px;
+  
+    
+}
+
+  
+    .navbar ul li{
+        display: none;
+       
+       }
+       .loginBtn, .sinInBtn{
+           display: none;
+       
+       }
+     
+       #navIcon{
+        display: block;
+        background-color: #161615;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 10vh;
+        padding: 6px 10px;
+    }
+    #navIcon i{
+        text-decoration: none;
+        color: #0098DA;
+        width: 18vw;
+        margin: 0px 8px 0px 8px;
+        transform: translate(0px, 0px);
+      
+    }
+    #navIcon i:hover{
+        
+        transform: translatey(-16px);
+        transition: 1s;
+        
+      
+    }
 
     .songGif{
         width: 80px;
-       
        font-size: 10px;
        left: 2vw;
        

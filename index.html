@@ -18,11 +18,17 @@
     <nav class="navbar">
       <div class="logo"></div>
       <ul>
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
+       
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
       </ul>
+      <div class="rightNav">
+        <button type="button" class="loginBtn">Login</button>
+        <button type="button" class="sinInBtn">SinUp</button>
+      </div>
     </nav>
     <section class="home">
+     
       <div class="container">
         <div class="songItem">
           <h1 style="font-size: 40px">Best song is here</h1>
@@ -83,9 +89,10 @@
         <div class="songBanner"></div>
       </div>
       <div class="bottomControlar">
-        <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100" />
+        <input type="range" name="range" id="myProgressBar" value="0" min="0" max="1000" />
         <div class="icons">
           <!-- fontawsome icons -->
+         
           <i class="fa fa-3x fa-step-backward" id="pervious"></i>
           <i class="fa fa-3x fa-play-circle" id="masterPlay"></i>
           <i class="fa fa-3x fa-step-forward" id="next"></i>
@@ -93,7 +100,15 @@
         <div class="songGif">
             <img src="other/AcclaimedHeartfeltGoat-max-1mb.gif" id="gif"> <span id="gifSongName">Issa vibe</span>
         </div>
+       
       </div>
+      <div id="navIcon">
+        <a href="index.html"><i class="fa fa-2x fa-home"></i></a>
+        <a href="About.html"><i class="fa fa-2x fa-info"></i></a>
+        <i class="fa fa-2x fa-bookmark"></i>
+        <i class="fa fa-2x fa-user"></i>
+        </div>
+     
     </section>
 
     <script src="script.js"></script>
