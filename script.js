@@ -10,6 +10,26 @@ window.addEventListener("load", () => {
   let gifSongName = document.getElementById("gifSongName");
   let songlist = Array.from(document.getElementsByClassName("songlist"));
   let songPlay = Array.from(document.getElementsByClassName("songPlay"));
+  const navIcon =document.querySelector('.navIcon');
+  const menubox = document.querySelector('.menuBox');
+  const navbar = document.querySelector('.navbar');
+
+
+  //menu
+ document.querySelector('.menuBox').addEventListener('click', function(){
+  navIcon.classList.remove('navGo');
+  menubox.classList.add('vClass');
+  navbar.classList.add('vClass');
+ })
+
+ document.querySelector('.home').addEventListener('click', function(){
+  navIcon.classList.add('navGo');
+  menubox.classList.remove('vClass');
+  navbar.classList.remove('vClass');
+
+ })
+
+
 
   let songs = [
     {

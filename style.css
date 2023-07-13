@@ -54,6 +54,9 @@ padding: 0;
    
     
 }
+.navIcon{
+    display: none;
+}
 
 .logo{
     margin: 5px;
@@ -168,7 +171,7 @@ padding: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 20vh;
     bottom: 0;
 }
 .songGif{
@@ -235,15 +238,17 @@ padding: 0;
     
 }
 @media screen and (max-width: 500px) {
+    .vClass{
+        display: none;
+    }
    .navbar{
-    height: 70px;
+    transition: 1s ease;
     background-image: url(other/tree.jpeg);
    }
    .logo{
-  
+    margin: 0px auto;
     width: 60px;
     height: 60px;
-  
     
 }
 
@@ -252,29 +257,62 @@ padding: 0;
         display: none;
        
        }
-       .loginBtn, .sinInBtn{
-           display: none;
-       
+      
+       .menuBox{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        padding: 5px;
+        flex-direction: column;
+        position: sticky;
+        top: 5px;
+        left: 5px;
        }
-     
-       #navIcon{
-        display: block;
-        background-color: #161615;
+       .menuBox  .menu{
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        position: sticky;
+        margin: 3px auto;
+       }
+       .navIcon{
+        display: flex;
+        flex-direction: column;
         position: fixed;
-        bottom: 0;
-        width: 100vw;
-        height: 10vh;
-        padding: 6px 10px;
-    }
-    #navIcon i{
+        padding: 20px 10px;
+        z-index: 1;
+        top: 0;
+        left: 0px;
+        width: 70%;
+        height: 100%;
+        transition: 1s;
+        background-image: url(other/tree.jpeg);
+
+       }
+     .navGo{
+        transition: 1s;
+        position: absolute;
+        left: -100px;
+        width: 0;
+     }
+   
+     .navIcon a{
         text-decoration: none;
         color: #0098DA;
-        width: 18vw;
+        font-size: 20px;
+      
+    }
+     
+    .navIcon a i{
+       font-size: 30px;
+        width: 10vw;
+        padding: 10px;
         margin: 0px 8px 0px 8px;
         transform: translate(0px, 0px);
       
     }
-    #navIcon i:hover{
+   
+    .navIcon i:hover{
         
         transform: translatey(-16px);
         transition: 1s;
