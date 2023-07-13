@@ -99,7 +99,7 @@ padding: 0;
     display: none;
 }
 .home{
-    height: 110vh;
+    height: 100vh;
     color: #fff;
     padding: 12px;
     font-family: 'Lato', sans-serif;
@@ -171,7 +171,7 @@ padding: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 30vh;
     bottom: 0;
 }
 .songGif{
