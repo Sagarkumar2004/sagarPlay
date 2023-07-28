@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+   
+    
+}
+.overlay{
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(other/7.jpg);
+
+}
+
+.LoginContainer{
+    width: 30vw;
+    height: 70vh;
+    z-index: 2;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 23px;
+    background-color: #fff;
+    box-shadow: 2px 3px 5px #444;
+    box-shadow: inset 0px 0px 20px #888;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* .SinupBox{
+    width: 30vw;
+    height: 70vh;
+    background-color: #fff;
+} */
+.heading{
+    margin: 5px auto;
+    display: flex;
+    width: 25vw;
+    height: 10vh;
+   
+
+}
+#login{
+    background: linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144));
+}
+.headingBtn{
+   width: 15vw;
+   height: 8vh;
+   font-size: 20px;
+   border: 1px solid rgba(255, 0, 212, 0.404);
+   background-color: #fff;
+
+}
+.LoginContainer .InputStyle{
+    border-radius: 8px;
+    background-color: #807e7e54;
+    cursor: pointer;
+    border: 2px solid transparent;
+    width: 20vw;
+    height: 4vh;
+    padding: 8px;
+    margin: 5px 15px;
+}
+.LoginContainer #loginBtn{
+    width: 10vw;
+    height: 8vh;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    background: linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144));
+    border: 2px solid transparent;
+    margin: 10px auto;
+}
+.LoginContainer #loginBtn:hover{
+    background: linear-gradient(to right, rgba(252, 2, 210, 0.707), rgba(255, 0, 144, 0.707));
+}
+.Icon{
+    width: 20vw;
+    height: 8vh;
+    margin: 10px auto;
+    display: flex;
+   font-size: 30px;
+  
+    
+}
+.Icon i{
+    cursor: pointer;
+    margin: 6px auto;
+   
+}
+.Icon i:hover{
+    transition: 0.4s;
+    transform: translate(0, -8px);
+   
+}
+.ceterText{
+    margin: 0 auto;
+    cursor: pointer;
+}
+.ceterText:hover{
+   color: rgba(255, 0, 212, 0.404);
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .LoginContainer{
+        width: 60vw;
+      
+    }
+    .heading{
+        width: 50vw;
+        font-size: 20px;       
+    
+    }
+    .headingBtn{
+        width: 45vw;
+     
+     }
+    .LoginContainer .InputStyle{
+        width: 50vw;
+    }
+
+    .LoginContainer #loginBtn{
+        width: 30vw;
+        
+    }
+    .Icon{
+        width: 50vw;
+       font-size: 23px;
+        
+    }
+
+
+}

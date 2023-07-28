@@ -241,3 +241,26 @@ window.addEventListener("load", () => {
   });
 
 })
+
+
+////////////////////////Login and sinup/////////////////////////////////////////////////
+
+// const UserName = document.querySelector('.UserName').textContent;
+// const password = document.querySelector('.password').textContent;
+
+// console.log(UserName, password)
+
+document.querySelector('#sinup').addEventListener("click", function(){
+  document.querySelector('#sinup').style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
+  document.querySelector('#login').style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
+  document.querySelector('.LoginBox').style.display = 'none';
+  document.querySelector('#password').style.display = 'none';
+
+});
+
+document.querySelector('#login').addEventListener("click", function(){
+  document.querySelector('#login').style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
+  document.querySelector('#sinup').style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
+  
+
+});

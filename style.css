@@ -75,12 +75,22 @@
   border: 1px solid #0098da;
   border-radius: 10px;
   transition: background-color 0.3s ease;
+ 
+}
+.loginBtn,
+.sinInBtn a{
+  color: #001822;
+  text-decoration: none;
+  list-style: none;
 }
 .loginBtn:hover,
 .sinInBtn:hover {
   background-color: transparent;
-  color: #0098da;
   border: 1px solid #0098da;
+}
+.loginBtn:hover,
+.sinInBtn:hover a{
+  color: #0098da;
 }
 #navIcon {
   display: none;
