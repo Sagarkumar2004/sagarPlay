@@ -253,14 +253,39 @@ window.addEventListener("load", () => {
 document.querySelector('#sinup').addEventListener("click", function(){
   document.querySelector('#sinup').style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
   document.querySelector('#login').style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
-  document.querySelector('.LoginBox').style.display = 'none';
+  document.querySelector('#UserName').style.display = 'none';
   document.querySelector('#password').style.display = 'none';
+  document.querySelector('.LoginContainer').classList.add("sinupContainer");
+  document.querySelector('.LoginContainer').classList.remove("LoginContainer");
+  document.querySelector('#Name').style.display = 'block';
+  document.querySelector('#number').style.display = 'block';
+  document.querySelector('#email').style.display = 'block';
+  document.querySelector('#NewUserName').style.display = 'block';
+  document.querySelector('#NewPassword').style.display = 'block';
+  document.querySelector('#repetPassword').style.display = 'block';
+  document.querySelector('#loginBtn').textContent = "Submit";
+  document.querySelector('.anotherOption').textContent = "Continue with";
+  document.querySelector('.forgetPass').textContent = "";
 
+  
 });
 
 document.querySelector('#login').addEventListener("click", function(){
   document.querySelector('#login').style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
   document.querySelector('#sinup').style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
+  document.querySelector('#UserName').style.display = 'block';
+  document.querySelector('#password').style.display = 'block';
+  document.querySelector('.sinupContainer').classList.add("LoginContainer");
+  document.querySelector('.sinupContainer').classList.remove("sinupContainer");
+  document.querySelector('#Name').style.display = 'none';
+  document.querySelector('#number').style.display = 'none';
+  document.querySelector('#email').style.display = 'none';
+  document.querySelector('#NewUserName').style.display = 'none';
+  document.querySelector('#NewPassword').style.display = 'none';
+  document.querySelector('#repetPassword').style.display = 'none';
+  document.querySelector('#loginBtn').textContent = "Login";
+  document.querySelector('.anotherOption').textContent = "Login with";
+  document.querySelector('.forgetPass').textContent = "Forget Password";
   
 
 });

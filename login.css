@@ -7,11 +7,12 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-   
+    background-color: #111;
     
 }
 .overlay{
-    filter: blur(2px);
+    filter: blur(6px);
+    -webkit-filter: blur(4px);
     position: absolute;
     top: 0;
     left: 0;
@@ -22,6 +23,8 @@
     background-position: center;
     background-size: cover;
     background-image: url(other/7.jpg);
+    opacity: 0.4;
+    
 
 }
 
@@ -40,12 +43,56 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.4s;
 }
-/* .SinupBox{
-    width: 30vw;
-    height: 70vh;
+.sinupContainer{
+    width: 60vw;
+    height: 80vh;
+    z-index: 2;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 23px;
     background-color: #fff;
-} */
+    box-shadow: 2px 3px 5px #444;
+    box-shadow: inset 0px 0px 20px #888;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s;
+
+}
+.sinupInputContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#Name{
+    display: none;
+
+}
+#number{
+    display: none;
+
+}
+#email{
+    display: none;
+
+}
+#NewUserName{
+    display: none;
+
+}
+#NewPassword{
+    display: none;
+
+}
+#repetPassword{
+    display: none;
+
+}
+
 .heading{
     margin: 5px auto;
     display: flex;
@@ -58,24 +105,24 @@
     background: linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144));
 }
 .headingBtn{
-   width: 15vw;
+   width: 18vw;
    height: 8vh;
    font-size: 20px;
    border: 1px solid rgba(255, 0, 212, 0.404);
    background-color: #fff;
 
 }
-.LoginContainer .InputStyle{
+.InputStyle{
     border-radius: 8px;
     background-color: #807e7e54;
     cursor: pointer;
     border: 2px solid transparent;
-    width: 20vw;
+    width: 24vw;
     height: 4vh;
     padding: 8px;
-    margin: 5px 15px;
+    margin: 5px auto;
 }
-.LoginContainer #loginBtn{
+#loginBtn{
     width: 10vw;
     height: 8vh;
     cursor: pointer;
@@ -85,8 +132,12 @@
     border: 2px solid transparent;
     margin: 10px auto;
 }
-.LoginContainer #loginBtn:hover{
+ #loginBtn:hover{
     background: linear-gradient(to right, rgba(252, 2, 210, 0.707), rgba(255, 0, 144, 0.707));
+}
+.anotherOption{
+    margin: auto;
+
 }
 .Icon{
     width: 20vw;
@@ -107,11 +158,11 @@
     transform: translate(0, -8px);
    
 }
-.ceterText{
+.forgetPass{
     margin: 0 auto;
     cursor: pointer;
 }
-.ceterText:hover{
+.forgetPass:hover{
    color: rgba(255, 0, 212, 0.404);
 }
 
@@ -119,23 +170,33 @@
 @media screen and (max-width: 600px) {
 
     .LoginContainer{
-        width: 60vw;
+        width: 80vw;
       
     }
+    .sinupContainer{
+        width: 90vw;
+        height: 90vh;
+       
+    
+    }
     .heading{
-        width: 50vw;
-        font-size: 20px;       
+        width: 40vw;
+        font-size: 10px;       
     
     }
     .headingBtn{
-        width: 45vw;
+        width: 20vw;
+        height: 5vh;
+        font-size: 11px;
      
      }
-    .LoginContainer .InputStyle{
-        width: 50vw;
+     .InputStyle{
+        width: 60vw;
+        height: 2vh;
+        font-size: 9px;
     }
 
-    .LoginContainer #loginBtn{
+    #loginBtn{
         width: 30vw;
         
     }
