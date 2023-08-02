@@ -132,6 +132,10 @@
     border: 2px solid transparent;
     margin: 10px auto;
 }
+#loginBtn:active{
+    transform: translate(0, 5px);
+
+}
  #loginBtn:hover{
     background: linear-gradient(to right, rgba(252, 2, 210, 0.707), rgba(255, 0, 144, 0.707));
 }

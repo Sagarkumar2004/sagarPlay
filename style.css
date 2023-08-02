@@ -177,13 +177,24 @@ i {
   opacity: 0;
   transition: 1s;
 }
-#myProgressBar {
+input[type="range"] {
+  accent-color: #faf8f8;
   width: 80vw;
-  height: 2px;
+  height: 3px;
   border-radius: 6px;
   cursor: pointer;
+  cursor: ew-resize;
+  background-repeat: no-repeat;
 }
-#myProgressBar:hover {
+
+input[type=range]::-webkit-slider-runnable-track  {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type="range"]:hover {
   height: 5px;
   transition: 0.5s;
 }

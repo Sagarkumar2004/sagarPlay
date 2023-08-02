@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
   let gifSongName = document.getElementById("gifSongName");
   let songlist = Array.from(document.getElementsByClassName("songlist"));
   let songPlay = Array.from(document.getElementsByClassName("songPlay"));
-  const navIcon =document.querySelector('.navIcon');
+  const navIcon = document.querySelector('.navIcon');
   const menubox = document.querySelector('.menuBox');
   const navbar = document.querySelector('.navbar');
 
@@ -104,7 +104,7 @@ window.addEventListener("load", () => {
     
     if (songIndex < songs.length) {
       gifSongName.innerText = songs[songIndex++].songName;
-      audioElement.src = `Song/${songIndex++}.mp3`;
+      audioElement.src = `Song/${songIndex}.mp3`;
       audioElement.currentTime = "0";
       audioElement.play()
     } else {
@@ -130,12 +130,12 @@ window.addEventListener("load", () => {
   // update range0
 
   audioElement.addEventListener("timeupdate", () => {
-    progress = parseInt((audioElement.currentTime / audioElement.duration) * 1000);
+    progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
     myProgressBar.value = progress;
   });
 
   myProgressBar.addEventListener("change", () => {
-    audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 1000;
+    audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 100;
   });
 
   // song play and pause in list song
@@ -245,47 +245,57 @@ window.addEventListener("load", () => {
 
 ////////////////////////Login and sinup/////////////////////////////////////////////////
 
-// const UserName = document.querySelector('.UserName').textContent;
-// const password = document.querySelector('.password').textContent;
+const sinup = document.querySelector('#sinup');
+const login = document.querySelector('#login');
+const UserName = document.querySelector('#UserName');
+const password = document.querySelector('#password');
+const LoginContainer = document.querySelector('.LoginContainer');
+const Name = document.querySelector('#Name');
+const number = document.querySelector('#number');
+const email = document.querySelector('#email');
+const NewUserName = document.querySelector('#NewUserName');
+const NewPassword = document.querySelector('#NewPassword');
+const repetPassword = document.querySelector('#repetPassword');
+const loginBtn =document.querySelector('#loginBtn');
+const anotherOption = document.querySelector('.anotherOption');
+const forgetPass = document.querySelector('.forgetPass');
 
-// console.log(UserName, password)
-
-document.querySelector('#sinup').addEventListener("click", function(){
-  document.querySelector('#sinup').style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
-  document.querySelector('#login').style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
-  document.querySelector('#UserName').style.display = 'none';
-  document.querySelector('#password').style.display = 'none';
-  document.querySelector('.LoginContainer').classList.add("sinupContainer");
-  document.querySelector('.LoginContainer').classList.remove("LoginContainer");
-  document.querySelector('#Name').style.display = 'block';
-  document.querySelector('#number').style.display = 'block';
-  document.querySelector('#email').style.display = 'block';
-  document.querySelector('#NewUserName').style.display = 'block';
-  document.querySelector('#NewPassword').style.display = 'block';
-  document.querySelector('#repetPassword').style.display = 'block';
-  document.querySelector('#loginBtn').textContent = "Submit";
-  document.querySelector('.anotherOption').textContent = "Continue with";
-  document.querySelector('.forgetPass').textContent = "";
+sinup.addEventListener("click", function(){
+  sinup.style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
+  login.style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
+  UserName.style.display = 'none';
+  password.style.display = 'none';
+  LoginContainer.classList.add("sinupContainer");
+  LoginContainer.classList.remove("LoginContainer");
+  Name.style.display = 'block';
+  number.style.display = 'block';
+  email.style.display = 'block';
+  NewUserName.style.display = 'block';
+  NewPassword.style.display = 'block';
+  repetPassword.style.display = 'block';
+  loginBtn.textContent = "Submit";
+  anotherOption.textContent = "Continue with";
+  forgetPass.textContent = "";
 
   
 });
 
-document.querySelector('#login').addEventListener("click", function(){
-  document.querySelector('#login').style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
-  document.querySelector('#sinup').style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
-  document.querySelector('#UserName').style.display = 'block';
-  document.querySelector('#password').style.display = 'block';
-  document.querySelector('.sinupContainer').classList.add("LoginContainer");
-  document.querySelector('.sinupContainer').classList.remove("sinupContainer");
-  document.querySelector('#Name').style.display = 'none';
-  document.querySelector('#number').style.display = 'none';
-  document.querySelector('#email').style.display = 'none';
-  document.querySelector('#NewUserName').style.display = 'none';
-  document.querySelector('#NewPassword').style.display = 'none';
-  document.querySelector('#repetPassword').style.display = 'none';
-  document.querySelector('#loginBtn').textContent = "Login";
-  document.querySelector('.anotherOption').textContent = "Login with";
-  document.querySelector('.forgetPass').textContent = "Forget Password";
+login.addEventListener("click", function(){
+  login.style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
+  sinup.style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
+  UserName.style.display = 'block';
+  password.style.display = 'block';
+  document.querySelector(".sinupContainer").classList.add("LoginContainer");
+  document.querySelector(".sinupContainer").classList.remove("sinupContainer");
+  Name.style.display = 'none';
+  number.style.display = 'none';
+  email.style.display = 'none';
+  NewUserName.style.display = 'none';
+  NewPassword.style.display = 'none';
+  repetPassword.style.display = 'none';
+  loginBtn.textContent = "Login";
+  anotherOption.textContent = "Login with";
+  forgetPass.textContent = "Forget Password";
   
 
 });
