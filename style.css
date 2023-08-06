@@ -280,10 +280,12 @@ input[type="range"]:hover {
 }
 .icons {
  width: auto;
- 
   cursor: pointer;
   font-size: 10px;
 }
+.icons i{
+  margin: 4px;
+ }
 .navbar {
   transition: 1s ease;
 
