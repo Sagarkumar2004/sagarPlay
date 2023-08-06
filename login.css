@@ -21,8 +21,7 @@
     height: 100%;
     width: 100%;
     background-position: center;
-    background-size: cover;
-    background-image: url(other/7.jpg);
+    background-color: #444;
     opacity: 0.4;
     
 
@@ -102,13 +101,13 @@
 
 }
 #login{
-    background: linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144));
+    background-color: #1db954;
 }
 .headingBtn{
    width: 18vw;
    height: 8vh;
    font-size: 20px;
-   border: 1px solid rgba(255, 0, 212, 0.404);
+   border: 1px solid #1aa34a;
    background-color: #fff;
 
 }
@@ -128,7 +127,7 @@
     cursor: pointer;
     font-size: 16px;
     border-radius: 6px;
-    background: linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144));
+    background-color: #1db954;
     border: 2px solid transparent;
     margin: 10px auto;
 }
@@ -137,7 +136,7 @@
 
 }
  #loginBtn:hover{
-    background: linear-gradient(to right, rgba(252, 2, 210, 0.707), rgba(255, 0, 144, 0.707));
+    background-color: #1aa34a;
 }
 .anotherOption{
     margin: auto;

@@ -261,7 +261,7 @@ const anotherOption = document.querySelector('.anotherOption');
 const forgetPass = document.querySelector('.forgetPass');
 
 sinup.addEventListener("click", function(){
-  sinup.style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
+  sinup.style.background = '#1aa34a';
   login.style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
   UserName.style.display = 'none';
   password.style.display = 'none';
@@ -281,7 +281,7 @@ sinup.addEventListener("click", function(){
 });
 
 login.addEventListener("click", function(){
-  login.style.background = 'linear-gradient(to right, rgb(255, 0, 212), rgb(255, 0, 144))';
+  login.style.background = '#1aa34a';
   sinup.style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
   UserName.style.display = 'block';
   password.style.display = 'block';

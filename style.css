@@ -1,163 +1,200 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:ital,wght@1,300&family=Ubuntu:wght@300&family=Ysabeau:ital,wght@0,200;0,1000;1,100;1,200;1,300;1,1000&display=swap");
+/* Add this to your style.css */
 
-* {
+/* Reset some default styles */
+body, h1, h2, h3, p {
   margin: 0;
   padding: 0;
 }
-.navbar {
-  height: 80px;
-  color: #0098da;
-  font-family: "Ubuntu", sans-serif;
-  background-color: #222;
-  display: flex;
-  flex-direction: row;
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181818;
+  color: #fff;
 }
-.navbar ul {
-  margin: 20px;
-  list-style: none;
-  text-decoration-style: none;
+
+/* Navigation bar */
+.navbar {
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  background-color: #121212;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.navbar ul li {
-  margin: 0px 10px;
-  font-size: 18px;
-  background-color: #001822;
-  padding: 5px;
-  cursor: pointer;
-  width: 90px;
-  height: 25px;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  padding: 10px;
-}
-.navbar ul li a {
-  list-style: none;
-  text-decoration: none;
-  color: #0098da;
-}
-.navbar ul li:hover {
-  color: #a8cf45;
-  background-color: transparent;
-  border: 1px solid #0098da;
-}
-.navIcon {
-  display: none;
+
+.menuBox {
+  display: none; /* Hide menu icon on larger screens */
 }
 
 .logo {
-  margin: 5px;
-  background-image: url(other/music\ logo\ design.png);
-  background-position: center;
-  background-size: cover;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+margin: 5px;
+background-image: url(other/music\ logo\ design.png);
+background-position: center;
+background-size: cover;
+width: 70px;
+height: 70px;
+border-radius: 50%;
 }
-.rightNav {
-  width: 200px;
-  height: 70px;
+
+
+.navbar ul {
   display: flex;
-  position: absolute;
-  right: 5px;
-  top: 0px;
-}
-.loginBtn,
-.sinInBtn {
-  width: 120px;
-  height: 40px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #0098da;
-  color: #001822;
-  margin: auto 6px;
-  border: 1px solid #0098da;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
- 
-}
-.loginBtn,
-.sinInBtn a{
-  color: #001822;
-  text-decoration: none;
   list-style: none;
 }
-.loginBtn:hover,
-.sinInBtn:hover {
-  background-color: transparent;
-  border: 1px solid #0098da;
+
+.navbar ul li {
+  margin-right: 20px;
 }
-.loginBtn:hover,
-.sinInBtn:hover a{
-  color: #0098da;
-}
-#navIcon {
-  display: none;
-}
-.home {
-  height: 100vh;
+
+.navbar ul li a {
+  text-decoration: none;
   color: #fff;
-  padding: 12px;
-  font-family: "Lato", sans-serif;
-  padding: 40px 0px;
-  background-image: url(other/tree.jpeg);
+  transition: color 0.3s ease;
 }
-.container {
-  min-height: 80vh;
-  width: 80vw;
-  margin-bottom: 20px;
+
+.navbar ul li a:hover {
+  color: #1db954; /* Spotify green */
+}
+
+.rightNav {
+  display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  margin: auto;
-  border-radius: 10px;
-  background-image: url(other/7.jpg);
-  background-position: center;
-  background-size: cover;
 }
-.songItem {
-  font-size: 20px;
-  padding: 10px;
+
+.sinInBtn {
+ 
+  margin-right: 10px;
+  padding: 8px 20px;
+  background-color: #1db954; /* Spotify green */
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+.sinInBtn a{
+  text-decoration: none; 
+  color: #fff;
+}
+
+.sinInBtn:hover {
+  background-color: #1aa34a; /* Slightly darker green */
+}
+
+/* Home section */
+.home {
+  height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.songItem h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
 .songContainer {
-  margin-left: 10px;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
+
 .songlist {
   display: flex;
-  flex-direction: row;
-  height: 50px;
-  width: 60%;
-  font-size: 20px;
-  color: black;
-  box-shadow: 12px 10px 16px #000;
-  margin: 12px 10px;
-  border-radius: 12px;
-  background-color: #0098da;
-  text-align: center;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  background-color: #282828;
+  border-radius: 8px;
 }
 
 .songlist img {
-  width: 43px;
-  margin: 0px 12px;
-  border-radius: 10px;
-}
-.duration,
-i {
-  margin: 5px;
-  cursor: pointer;
-}
-.songlistplay {
-  margin: 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
+.songName {
+  flex-grow: 1;
+}
+
+.duration {
+  margin-right: 10px;
+}
+
+.songPlay {
+  color: #1db954; /* Spotify green */
+  cursor: pointer;
+}
+
+.navIcon {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 0;
+  left: -300px; /* Hide it off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #121212;
+  z-index: 1000;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.navGo {
+  left: 0; /* Show the navigation icon when active */
+}
+
+.navIcon a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.navIcon a i {
+  margin-right: 10px;
+}
+
+/* Add this to your style.css */
+
+/* Enhancing the song list */
+.songlist {
+  padding: 15px;
+  background-color: #121212;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.songlist:hover {
+  background-color: #1f1f1f;
+}
+
+.songlist img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Bottom controls enhancements */
 .bottomControlar {
   margin-top: 40px;
   position: sticky;
-  background-color: #000;
+  background-color: #111;
   color: #fff;
   font-size: 18px;
   display: flex;
@@ -167,16 +204,29 @@ i {
   height: 30vh;
   bottom: 0;
 }
+
+
 .songGif {
-  width: 260px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   position: absolute;
   left: 10vw;
 }
-.songGif img {
-  width: 80px;
-  opacity: 0;
-  transition: 1s;
+
+#gif {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
 }
+
+#gifSongName {
+  font-size: 16px;
+}
+
+
+/* Navigation icon for mobile */
 input[type="range"] {
   accent-color: #faf8f8;
   width: 80vw;
@@ -200,124 +250,142 @@ input[type="range"]:hover {
 }
 
 .icons {
+  width: 170px;
   margin: 12px;
   cursor: pointer;
+  font-size: 24px;
 }
 
-@media screen and (max-width: 700px) {
-  .songContainer {
-    margin: auto;
-  }
-  .songlist {
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    width: auto;
-    margin: 10px;
-  }
-  .songGif {
-    width: 160px;
-    margin: 10px;
-    font-size: 12px;
-    left: 5vw;
-    display: flex;
-    flex-direction: column;
-  }
-  .songGif img {
-    width: 50px;
-  }
-  .icons {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .vClass {
-    display: none;
-  }
-  .navbar {
-    transition: 1s ease;
-    background-image: url(other/tree.jpeg);
-  }
-  .logo {
-    margin: 0px auto;
-    width: 60px;
-    height: 60px;
-  }
 
-  .navbar ul li {
-    display: none;
-  }
-
-  .menuBox {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    padding: 5px;
-    flex-direction: column;
-    position: sticky;
+/* Mobile adjustments */
+/* 4k display */
+@media screen and (min-width: 1400px) {
   
-  }
-  .menuBox .menu {
-    width: 30px;
-    height: 2px;
-    border-radius: 4px;
-    background-color: #fff;
-    position: sticky;
-    margin: 3px auto;
-  }
-  .navIcon {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    padding: 20px 10px;
-    z-index: 1;
-    top: 0;
-    left: 0px;
-    width: 70%;
-    height: 100%;
-    transition: 1s;
-    background-image: url(other/tree.jpeg);
-  }
-  .navGo {
-    transition: 1s;
-    position: absolute;
-    left: -100px;
-    width: 0;
-  }
 
-  .navIcon a {
-    text-decoration: none;
-    color: #0098da;
-    font-size: 20px;
-  }
-
-  .navIcon a i {
-    font-size: 30px;
-    width: 10vw;
-    padding: 10px;
-    margin: 0px 8px 0px 8px;
-    transform: translate(0px, 0px);
-  }
-
-  .navIcon i:hover {
-    transform: translatey(-16px);
-    transition: 1s;
-  }
-
-  .songGif {
-    width: 80px;
-    font-size: 10px;
-    left: 2vw;
-  }
-
-  .songlist {
-    font-size: 12px;
-  }
-  .songlist img {
-    width: 30px;
-    margin: 0px 12px;
-  }
-  .songlistplay {
-    margin: 5px;
-  }
+.home {
+    height: 100vh;
 }
+  .container {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+}
+@media screen and (max-width: 576px) {
+  
+.vClass {
+  display: none;
+}
+.icons {
+ width: auto;
+ 
+  cursor: pointer;
+  font-size: 10px;
+}
+.navbar {
+  transition: 1s ease;
+
+}
+.logo {
+  margin: 0px auto;
+  width: 60px;
+  height: 60px;
+}
+
+.navbar ul li {
+  display: none;
+}
+
+.menuBox {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  position: sticky;
+
+}
+.menuBox .menu {
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #1db954;
+  position: sticky;
+  margin: 3px auto;
+}
+.navIcon {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 20px 10px;
+  z-index: 1;
+  top: 0;
+  left: 0px;
+  width: 70%;
+  height: 100%;
+  transition: 1s;
+ 
+}
+.navGo {
+  transition: 1s;
+  position: absolute;
+  left: -100px;
+  width: 0;
+}
+
+.navIcon a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.navIcon a i {
+  font-size: 30px;
+  color: #1db954;
+  width: 10vw;
+  padding: 10px;
+  margin: 0px 8px 0px 8px;
+  transform: translate(0px, 0px);
+}
+
+.navIcon i:hover {
+  transform: translatey(-16px);
+  transition: 1s;
+}
+
+.songGif {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  margin-top: 30px;
+  left: 2vw;
+}
+
+#gif {
+  width: 30px;
+  height: 30px;
+  
+  border-radius: 50%;
+}
+
+.songlist {
+  font-size: 12px;
+}
+.songlist img {
+  width: 30px;
+  margin: 0px 12px;
+}
+.songlistplay {
+  margin: 5px;
+}
+}
+
+
+
+
+
+  
+
