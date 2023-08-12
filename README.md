@@ -1,9 +1,9 @@
 
-🎵 MyMusicApp Clone 🎶
+🎵 SagarPlay 🎶
 
-Welcome to the MyMusicApp Clone repository! This project is a web application inspired by the popular music streaming services. It allows users to discover, search for, and listen to their favorite music tracks, create playlists, and enjoy a seamless music experience.
+Welcome to the SagarPlay repository! This project is a web application inspired by the popular music streaming services. It allows users to discover, search for, and listen to their favorite music tracks, create playlists, and enjoy a seamless music experience.
 
-MyMusicApp Clone Demo
+Music App Clone
 
 Features
 
@@ -28,11 +28,17 @@ Database(Not completed): MongoDB
 Getting Started
 
 Clone the repository: git clone https://github.com/sagarKumar/sagarPlay.git
+
 Live here: https://sagarkumar2004.github.io/sagarPlay/
+
 Navigate to the project directory: cd sagarPlay
+
 Install dependencies: npm install
+
 Set up your MongoDB connection in config.js
+
 Start the server: npm start
+
 Open your browser and visit: http://localhost:3000
 
 Contributing
@@ -40,7 +46,9 @@ Contributing
 💖 Contributions are welcome! If you find any bugs or want to add new features, feel free to open an issue or submit a pull request. Make sure to follow the code of conduct.
 
 
-
-
-
 🎶 Let the music play and the good times roll! 🎶
+
+
+
+
+
