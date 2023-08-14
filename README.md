@@ -27,7 +27,7 @@ Database(Not completed): MongoDB
 
 Getting Started
 
-Clone the repository: git clone https://github.com/sagarKumar/sagarPlay.git
+Clone the repository: git clone [https://github.com/sagarKumar/sagarPlay.git](https://github.com/Sagarkumar2004/sagarPlay)
 
 Live here: https://sagarkumar2004.github.io/sagarPlay/
 
