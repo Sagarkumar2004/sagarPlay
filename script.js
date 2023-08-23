@@ -1,3 +1,4 @@
+
 console.log("welcome to music");
 window.addEventListener("load", () => {
 
@@ -16,6 +17,13 @@ window.addEventListener("load", () => {
 
 
   //menu
+const mobileNav = function(){
+  navIcon.classList.add('navGo');
+  menubox.classList.remove('vClass');
+  navbar.classList.remove('vClass');
+
+}
+
  document.querySelector('.menuBox').addEventListener('click', function(){
   navIcon.classList.remove('navGo');
   menubox.classList.add('vClass');
@@ -189,7 +197,7 @@ window.addEventListener("load", () => {
 
         })
         
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
+       /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
       } else {
         makeAllPause();
@@ -259,8 +267,10 @@ const repetPassword = document.querySelector('#repetPassword');
 const loginBtn =document.querySelector('#loginBtn');
 const anotherOption = document.querySelector('.anotherOption');
 const forgetPass = document.querySelector('.forgetPass');
-
+ 
+  
 sinup.addEventListener("click", function(){
+  
   sinup.style.background = '#1aa34a';
   login.style.background = 'linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))';
   UserName.style.display = 'none';
@@ -277,7 +287,6 @@ sinup.addEventListener("click", function(){
   anotherOption.textContent = "Continue with";
   forgetPass.textContent = "";
 
-  
 });
 
 login.addEventListener("click", function(){
